@@ -14,15 +14,12 @@ Show the calculation formula used
 direction = input("Choose conversion direction (1: THB to USD, 2: USD to THB): ")
 amount = float(input("Enter the amount to convert: "))
 if direction == "1":
-    # THB to USD
     result = amount / 35.5
     print(f"{amount} THB = {result:.2f} USD")
     print(f"Calculation formula: {amount} / 35.5")
 elif direction == "2":
-    # USD to THB
     result = amount * 35.5
     print(f"{amount} USD = {result:.2f} THB")
     print(f"Calculation formula: {amount} * 35.5")
 else:
     print("Invalid direction selected.")
-    

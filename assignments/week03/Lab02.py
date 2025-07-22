@@ -29,7 +29,7 @@ if entered_pin == pin:
             balance += amount
             print("Deposit successful")
         elif choice == "4":
-            print("Exiting...")
+            print("Exiting")
             break
         else:
             print("Invalid choice")

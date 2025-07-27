@@ -32,8 +32,8 @@ emergency_fund = monthly_income * (emergency_fund_percent / 100)
 # เงินลงทุนตามเปอร์เซ็นต์ที่กำหนด
 investment_amount = monthly_income * (investment_percent / 100)
 
-# เงินที่สามารถเก็บออมได้ เป็นเงินเก็บฉุกเฉินและลงทุน
-available_for_savings = remaining_income - emergency_fund - investment_amount
+# เงินที่สามารถเก็บออมได้ เป็นเงินเก็บฉุกเฉิน
+available_for_savings = remaining_income - emergency_fund
 
 # คำนวณสัดส่วนค่าใช้จ่ายต่อรายได้
 expense_ratio = (total_expenses / monthly_income) * 100

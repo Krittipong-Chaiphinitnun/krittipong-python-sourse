@@ -1,7 +1,7 @@
 """
 Personal Finance Calculator
 Student: Krittipong Chaiphinitnun
-Date: 2025-07-27
+Date: 27-07-2025
 Purpose: Calculate monthly budget and savings
 """
 

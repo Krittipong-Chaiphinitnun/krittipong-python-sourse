@@ -19,15 +19,21 @@ class Student:
 
     # Method to add a grade
     def add_grade(self, grade):
-        pass
+        self.grades.append(grade)
 
     # Method to get the average grade
     def get_average_grade(self):
-        pass
+        if not self.grades:
+            return 0
+        total = sum(g["grade"] for g in self.grades)
+        return total / len(self.grades)
 
     # Method to get the grade report
     def get_grade_report(self):
-        pass
+        report = []
+        for g in self.grades:
+            report.append(f"{g['subject']}: {g['grade']}")
+        return "\n".join(report)
 
 
 student = Student("John", 20, "S123")

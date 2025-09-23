@@ -58,8 +58,11 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # Return narrowed range around the number
-    pass
+    window_size = 12
+    lower = max(current_min, number - window_size)
+    upper = min(current_max, number + window_size)
+    return f"HINT: The number is between {lower} and {upper}"
 
 def get_thefirst_digit_hint(number):
     # Retun the first digit of the number
-    pass
+    return f"HINT: The first digit is {str(number)[0]}"

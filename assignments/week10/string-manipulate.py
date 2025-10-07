@@ -64,3 +64,24 @@ print("- Vowels: (%s)"% (vowels,vowelsString[0:-2]))
 print(f"- Consonants: {len(text) - text.count(' ')-vowels}")
 
 print(len(text.split()))
+
+words = text.split()
+if words:
+    longest = max(words, key=len)
+    shortest = min(words, key=len)
+    print(f'Longest word: "{longest}" ({len(longest)} letters)')
+    print(f'Shortest word: "{shortest}" ({len(shortest)} letters)')
+
+    vowels_set = set('aeiouAEIOU')
+    vowel_words = [w for w in words if w[0] in vowels_set]
+    consonant_words = [w for w in words if w[0].isalpha() and w[0] not in vowels_set]
+    print(f'Words starting with vowels: {len(vowel_words)} ({", ".join(vowel_words)})')
+    print(f'Words starting with consonants: {len(consonant_words)})')
+
+    print(f'Title Case: {text.title()}')
+    print(f'Upper Case: {text.upper()}')
+    print(f'Lower Case: {text.lower()}')
+    acronym = ''.join([w[0].upper() for w in words])
+    print(f'Acronym: {acronym}')
+    print(f'Reversed Text: {text[::-1]}')
+    print(f'Words Reversed: {" ".join([w[::-1] for w in words])}')

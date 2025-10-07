@@ -20,3 +20,29 @@ A global variable passing_grade = 50
 - Uses the global passing_grade to determine pass/fail
 - Prints each student's name, average, and status (PASS/FAIL)
 """
+
+passing_grade = 50
+
+def input_students(num_students):
+    students = []
+    for i in range(num_students):
+        name = input(f"Enter name for student #{i+1}: ")
+        scores = []
+        for j in range(3):
+            score = float(input(f"Enter score {j+1} for {name}: "))
+            scores.append(score)
+        students.append({'name': name, 'scores': scores})
+    return students
+
+def calculate_averages(students):
+    for student in students:
+        total = 0
+        for score in student['scores']:
+            total += score
+        average = total / len(student['scores'])
+        student['average'] = average  # Mutates the original list
+
+def display_results(students):
+    for student in students:
+        status = "PASS" if student['average'] >= passing_grade else "FAIL"
+        print(f"Name: {student['name']}, Average: {student['average']:.2f}, Status: {status}")
